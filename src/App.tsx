@@ -7,7 +7,6 @@ import Form from "./Components/Formcom/Form";
 function App() {
   return (
     <div className="App">
-      hi
       <div>
         <Form></Form>
         <Formlist></Formlist>

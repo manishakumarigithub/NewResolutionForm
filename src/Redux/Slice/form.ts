@@ -18,7 +18,13 @@ const formSlice = createSlice({
 
       state.formList.push(action.payload);
     },
-    Remove: (state, action) => {},
+    Remove: (state, action) => {
+      //const formlititem = [...state.formList];
+      const findarray = state.formList.findIndex(
+        (item) => item.Title === action.payload
+      );
+      state.formList.splice(findarray, 1);
+    },
   },
 });
 export const actions = formSlice.actions;

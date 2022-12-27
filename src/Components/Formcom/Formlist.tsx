@@ -1,4 +1,5 @@
 import React from "react";
+
 import Store from "../../Redux/Store";
 import { RootState } from "../../Redux/Store";
 import { useSelector } from "react-redux/es/exports";
@@ -9,7 +10,7 @@ export default function Formlist() {
   return (
     <div>
       <div>
-        Formlist:
+        RESOLUTION LIST
         {formValue.map((item, index) => (
           <FormlistItem item={item} key={uuid()} />
         ))}
