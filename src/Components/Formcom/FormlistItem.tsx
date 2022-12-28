@@ -6,11 +6,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { actions } from "../../Redux/Slice/form";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
+
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+
 type Prop = {
   item: ItemType;
 };
 export default function FormlistItem({ item }: Prop) {
   const RemoveItemHandler = useDispatch();
+  const getFavoriteItem = useDispatch();
   return (
     <div className="box">
       <div> Title:{item.Title}</div>
@@ -26,6 +30,13 @@ export default function FormlistItem({ item }: Prop) {
         {/*<button onClick={() => RemoveItemHandler(actions.Remove(item.Title))}>
           Remove
   </button>*/}
+        <IconButton
+          color="primary"
+          aria-label="add to shopping cart"
+          onClick={() => getFavoriteItem(actions.addItem(item))}
+        >
+          <AddShoppingCartIcon />
+        </IconButton>
       </div>
     </div>
   );

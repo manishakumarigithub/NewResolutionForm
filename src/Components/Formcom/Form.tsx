@@ -6,18 +6,18 @@ import "./Form.css";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
-
+import { ItemType } from "../../types/type";
 import { actions } from "../../Redux/Slice/form";
 
 import { v4 as uuid } from "uuid";
 
-//import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 //let myuuid = uuidv4();
 
 export default function Form() {
   const getvalue = useDispatch();
-  const [userInput, setuserInput] = useState({ Title: "", Date: "" });
+  const [userInput, setuserInput] = useState<ItemType>({ Title: "", Date: "" });
 
   function getTitle(event: React.ChangeEvent<HTMLInputElement>) {
     setuserInput({ ...userInput, Title: event.target.value });
