@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import { favReducer } from "./Slice/favSlice";
 import formReducer from "./Slice/form";
 const Store = configureStore({
-  reducer: { formItem: formReducer },
+  reducer: {
+    formItem: formReducer,
+
+    favItem: favReducer,
+  },
 });
 export type RootState = ReturnType<typeof Store.getState>;
 

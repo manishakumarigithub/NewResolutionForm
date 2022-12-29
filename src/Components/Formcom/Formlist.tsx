@@ -5,14 +5,15 @@ import { RootState } from "../../Redux/Store";
 import { useSelector } from "react-redux/es/exports";
 import FormlistItem from "./FormlistItem";
 import { v4 as uuid } from "uuid";
+const formId = uuid();
 export default function Formlist() {
   const formValue = useSelector((state: RootState) => state.formItem.formList);
   return (
     <div>
       <div>
         RESOLUTION LIST
-        {formValue.map((item, index) => (
-          <FormlistItem item={item} key={uuid()} />
+        {formValue.map((item) => (
+          <FormlistItem item={item} key={crypto.randomUUID()} itemId={formId} />
         ))}
       </div>
     </div>

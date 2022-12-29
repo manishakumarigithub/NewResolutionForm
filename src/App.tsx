@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Formlist from "./Components/Formcom/Formlist";
 import Form from "./Components/Formcom/Form";
+import FavItem from "./Components/fav/FavItem";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
         <Form></Form>
         <Formlist></Formlist>
+        <FavItem></FavItem>
       </div>
     </div>
   );

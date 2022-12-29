@@ -1,4 +1,6 @@
+import dayjs, { Dayjs } from "dayjs";
+
 export type ItemType = {
-  Title: string;
-  Date: string;
+  title: string;
+  date: Dayjs | null;
 };
