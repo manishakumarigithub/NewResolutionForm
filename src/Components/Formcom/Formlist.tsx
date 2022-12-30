@@ -13,7 +13,7 @@ export default function Formlist() {
       <div>
         RESOLUTION LIST
         {formValue.map((item) => (
-          <FormlistItem item={item} key={crypto.randomUUID()} itemId={formId} />
+          <FormlistItem item={item} key={crypto.randomUUID()} />
         ))}
       </div>
     </div>
